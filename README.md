@@ -89,7 +89,7 @@ value.toUpperCase(); // ❌ Error দিবে ।
 
 ঠিকভাবে ব্যবহার করলে:
 if (typeof value === "string") {
-value.toUpperCase(); // ✔️ OK
+value.toUpperCase(); // এবার ঠিক আছে ।
 }
 
 সংক্ষেপে:
@@ -113,3 +113,5 @@ while (true) {}
 
 (3) impossible type
 type A = string & number; // never
+
+কারণ একই ভেরিয়েবল কখনো স্ট্রিং এবং নাম্বার একসাথে হতেই পারে না।
