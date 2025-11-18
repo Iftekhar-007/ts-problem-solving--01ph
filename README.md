@@ -1,6 +1,8 @@
-Question No. 5
+<h1>Blogs</h1>
 
-<h2>🔵 TypeScript–এ Union ও Intersection</h2>
+<h2>Provide an example of using union and intersection types in TypeScript.</h2>
+
+<h3>🔵 TypeScript–এ Union ও Intersection</h3>
 
 <p>TypeScript–এ union আর intersection দুইটাই বেশ ব্যবহার হয়। ডেভেলপারদের কাছে এগুলো খুবই পছন্দের কারণ এগুলো কোডকে আরও শক্তিশালী আর নমনীয় করে।</p>
 
