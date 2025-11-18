@@ -42,7 +42,7 @@ type BookObj = {
 };
 
 const filterByRating = (params: BookObj[]): BookObj[] => {
-  return params.filter((param) => param.rating >= 4);
+  return params.filter((param) => param.rating >= 4 && param.rating <= 5);
 };
 
 type UserObjData = {
@@ -97,7 +97,6 @@ const calculateTotalPrice = (products: ProductObj[]): number => {
     return products.reduce((acc, item) => {
       const isDiscount = item.discount ? item.discount : 0;
       const initialDiscount = (item.price * isDiscount) / 100;
-      // const basePrice = item.price * item.quantity;
       const initialPrice =
         item.price * item.quantity - initialDiscount * item.quantity;
 
