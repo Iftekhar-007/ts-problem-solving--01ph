@@ -40,7 +40,7 @@ role: string;
 type AdminUser = User & Admin;
 
 const person: AdminUser = {
-name: "শাওন",
+name: "shawon",
 role: "admin",
 };
 
