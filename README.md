@@ -1,6 +1,6 @@
 <h1>Blogs</h1>
 
-<h2>Provide an example of using union and intersection types in TypeScript.</h2>
+<h2>🛑 Provide an example of using union and intersection types in TypeScript.</h2>
 
 <h3>🔵 TypeScript–এ Union ও Intersection</h3>
 
@@ -48,7 +48,7 @@ role: "admin",
 
 <!-- ! another -->
 
-<h2>Explain the difference between any, unknown, and never types in TypeScript.</h2>
+<h2>🛑 Explain the difference between any, unknown, and never types in TypeScript.</h2>
 
 <h4>🟦 1. any টাইপ</h4>
 যেকোনো কিছুই এর ভিতরে ঢুকবে।
