@@ -18,7 +18,7 @@ const getLength = (param: string | any[]): number => {
   } else if (Array.isArray(param)) {
     return param.length;
   } else {
-    throw new Error("inaapropriate data type");
+    return 0;
   }
 };
 
