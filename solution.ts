@@ -112,13 +112,6 @@ const getUniqueValues = (param1: Arr, param2: Arr): Arr => {
   return result;
 };
 
-const a1 = [1, 2, 3, 4];
-const a2 = [3, 4, 5, 6];
-
-const okay = getUniqueValues(a1, a2);
-
-console.log(okay);
-
 type ProductObj = {
   name: string;
   price: number;
