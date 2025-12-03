@@ -81,9 +81,43 @@ const myBook: Book = {
 type Arr = any[];
 
 const getUniqueValues = (param1: Arr, param2: Arr): Arr => {
-  const uniqueValues = Array.from(new Set(param1.concat(param2)));
-  return uniqueValues;
+  const result: Arr = [];
+
+  for (let i = 0; i < param1.length; i++) {
+    let exist: Boolean = false;
+    for (let k = 0; k < result.length; k++) {
+      if (param1[i] === result[k]) {
+        exist = true;
+      }
+    }
+
+    if (!exist) {
+      result.push(param1[i]);
+    }
+  }
+
+  for (let j = 0; j < param2.length; j++) {
+    let exist = false;
+    for (let k = 0; k < result.length; k++) {
+      if (param2[j] === result[k]) {
+        exist = true;
+      }
+    }
+
+    if (!exist) {
+      result.push(param2[j]);
+    }
+  }
+
+  return result;
 };
+
+const a1 = [1, 2, 3, 4];
+const a2 = [3, 4, 5, 6];
+
+const okay = getUniqueValues(a1, a2);
+
+console.log(okay);
 
 type ProductObj = {
   name: string;
@@ -93,16 +127,11 @@ type ProductObj = {
 };
 
 const calculateTotalPrice = (products: ProductObj[]): number => {
-  if (products.length > 0) {
-    return products.reduce((acc, item) => {
-      const isDiscount = item.discount ? item.discount : 0;
-      const initialDiscount = (item.price * isDiscount) / 100;
-      const initialPrice =
-        item.price * item.quantity - initialDiscount * item.quantity;
+  return products.reduce((acc, item) => {
+    const discountPercent = item.discount ?? 0;
+    const priceAfterDiscount = item.price * (1 - discountPercent / 100);
+    const totalPrice = priceAfterDiscount * item.quantity;
 
-      return acc + initialPrice;
-    }, 0);
-  } else {
-    return 0;
-  }
+    return acc + totalPrice;
+  }, 0);
 };
